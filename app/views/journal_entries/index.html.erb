@@ -1,0 +1,72 @@
+<%# #show all the journal entries %>
+
+
+<%# #create a new journal entry %>
+
+
+<h1>
+  Today
+</h1>
+
+
+<%= link_to new_journal_entry_path do %>
+<div class='plus-btn'>
+  <i class="fa-solid fa-plus fa-4x plus-icon"></i>
+
+</div>
+
+<% end %>
+
+
+
+<h2>Your recent entries:</h2>
+<div class='header-top'>
+    <% @journal_entries.each do |journal| %>
+      <div class='card'>
+        <div class="left-bar">
+
+        </div>
+        <div
+        class='card-content'
+
+        >
+          <%= link_to journal_entry_path(journal) do %>
+          <h3><%= journal.title %></h3>
+          <% end %>
+          <p>
+            <strong>Created:</strong>
+            <%= journal.created_at.strftime("%H:%M %d-%b %Y") %>
+          </p>
+      </div>
+        </div>
+
+    <% end %>
+
+
+
+</div>
+
+
+
+
+
+
+
+<%# link to show journal entry
+
+
+
+#date format should instead show time, then the date
+
+
+
+
+
+<%# link to new journal entry
+<%= link_to 'New Journal Entry', new_journal_entry_path %>
+
+
+
+
+<%# link to show journal entry
+<%= link_to 'Show', journal_entry_path(journal) %>

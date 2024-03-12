@@ -1,0 +1,13 @@
+
+
+<%# use simple form %>
+<%# want to use a textarea to allow for multi-line input %>
+<%# The content should be a textarea %>
+
+
+<%= simple_form_for @journal_entry do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+
+<% end %>
