@@ -1,0 +1,129 @@
+
+.quote-title {
+  margin-top: 15px;
+}
+
+.quotes {
+  text-align-last: right;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+}
+
+.feelings {
+  width: 300px;
+  height: 50px;
+  border: 2px solid #1c1919;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-radius: 8px;
+
+}
+
+.feelings:hover {
+  background-color: #4bd3dc;
+  transition: 0.5s;
+}
+
+.journal {
+  width: 200px;
+  height: 50px;
+  // border: 1px solid #1c1919;
+  padding-top: 12px;
+  padding-left: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: white;
+  background-color: #0C7B93;
+}
+
+.journal:hover {
+  background-color: #6aa7ab;
+  transition: 0.5s;
+}
+
+.vibes {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #1c1919;
+  padding-top: 12px;
+  padding-left: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+
+.ai {
+  width: 200px;
+  height: 50px;
+  // border: 1px solid #1c1919;
+  padding-top: 12px;
+  padding-left: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: white;
+  background-color: #0C7B93;
+}
+
+.ai:hover {
+  background-color: #6aa7ab;
+  transition: 0.5s;
+}
+
+.therapists {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #1c1919;
+  padding-top: 12px;
+  padding-left: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: white;
+  background-color: black;
+
+}
+
+.therapists:hover {
+  background-color: #777c7c;
+  transition: 0.5s;
+}
+
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+background-color: rgb(35, 34, 41);
+
+
+
+}
+
+.icon  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.icon i {
+  color:rgb(206, 220, 217);
+  padding-bottom: 12px;
+}
+h6 {
+  color: white;
+}
