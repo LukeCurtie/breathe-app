@@ -7,10 +7,15 @@
 
 <div class="features">
 
-  <div class="feelings">
-    <h4><i class="fa-solid fa-face-smile"></i>  How are you feeling?</h4>
-  </div>
 
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary feelings" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <h4><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
+  </button>
+  <!-- Render modal -->
+  <% if @mood.new_record? %>
+    <%= render "modal" %>
+  <% end %>
   <div class="journal">
     <h4>My journals</h4>
   </div>
@@ -28,7 +33,6 @@
   <div class="therapists">
     <h4>Therapists</h4>
   </div>
-
 
 </div>
 
