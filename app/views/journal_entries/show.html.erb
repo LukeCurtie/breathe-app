@@ -12,6 +12,8 @@
 
 
 
+<%#  %>
+
 
     <p>
       <strong>Created:</strong>
@@ -19,9 +21,10 @@
     </p>
 
 
-    <%# cl_imagetag %>
 
-    
+
+
+
 
 
 
@@ -37,10 +40,15 @@
     </i>
     <%= simple_form_for @journal_entry,  html: {class: "d-none", data: {add_form_target: "imageForm"}}  do |f| %>
 
-      <%= f.input :photo, as: :file, id: 'image-input' %>
-      <%= f.submit "Upload", class: "btn btn-primary" %>
-    <% end %>
+    <%= f.input :photo, as: :file, id: 'image-input' %>
+    <%= f.input :title %>
+<%= f.submit "Upload", class: "btn btn-primary" %>
 
+
+<!-- Display the image -->
+
+
+    <% end %>
 
 
   </div>
@@ -62,11 +70,34 @@
     <i class="fa-solid fa-underline"></i>
   </div>
 
-  <div>
-    <i class="fa-solid fa-trash"></i>
-  </div>
+
+
+    <%= link_to  journal_entry_path(@journal_entry), data:{'turbo-method': :delete} do %>
+       <div class='delete-img'>
+    <i class="fa-solid fa-trash" >
+
+    </i>
+     </div>
+  <% end %>
+    <%# #clicking on this should trigger the destory action %>
+<%# <%= link_to "Sign Out", destroy_user_session_path, data: { "turbo-method": :delete } %>
+
+
+
 </div>
 
     <%# <%= form_for @journal_entry do |f| %>
     <!-- Other form fields... -->
       <%# <%= f.file_field :image, id: 'image-input', class:'d-none' %>
+
+
+
+
+
+<%# <div class='card-div'>
+<% if @journal_entry.photo.attached? %>
+  <%# <%= cl_image_tag @journal_entry.photo.key  %>
+  <%# <% end %>
+
+
+<%# </div> %>
