@@ -2,6 +2,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
+
+    @quote = Quote.all.sample
+
+
     @mood = Mood.find_by(user: current_user, date: Date.current)
     @thismood = "How are you feeling?"
     if @mood == nil
