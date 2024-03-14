@@ -9,7 +9,7 @@
       <div class="modal-body">
         <div class="mb-3">
           <%= simple_form_for @mood do |f|%>
-            <%= f.input :emotion, collection: %w[Joyful Happy Numb Scared Sad Angry], as: :radio_buttons,
+            <%= f.input :emotion, collection:  ['😁 Joyful', '🙂 Happy', '😐 Numb', '😨 Scared', '😭 Sad', '😡 Angry'], as: :radio_buttons,
             input_html: { class: "emotion-selector" },
                   item_wrapper_class: 'emotion-item' %>
         </div>

@@ -1,0 +1,14 @@
+<div class="container mt-5 text-center">
+<h1>Mood progress</h1>
+<%= month_calendar(attribute: :date, events: @moods) do |date,moods| %>
+<div class="calendar">
+  <%= date.day %>
+  <% if moods.present? %>
+    <p> <%= moods.first["emotion"] %> </p>
+  <% end %>
+  </div>
+<% end %>
+</div>
+
+
+<%# Mood is an array of hashes that's why moods.first["emotion"]%>

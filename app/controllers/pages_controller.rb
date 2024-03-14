@@ -11,24 +11,25 @@ class PagesController < ApplicationController
     if @mood == nil
       @mood = Mood.new
     else
+
       case @mood.emotion
 
-      when "Joyful"
+      when "😁 Joyful"
         @thismood = "You feel joyful today"
 
-      when "Happy"
+      when "🙂 Happy"
         @thismood = "You feel happy today"
 
-      when "Numb"
+      when "😐 Numb"
         @thismood = "You feel numb today"
 
-      when "Sad"
+      when "😭 Sad"
         @thismood = "You feel sad today"
 
-      when "Angry"
+      when "😡 Angry"
         @thismood = "You feel angry today"
 
-      when "Scared"
+      when "😨 Scared"
         @thismood = "You feel scared today"
       end
     end
