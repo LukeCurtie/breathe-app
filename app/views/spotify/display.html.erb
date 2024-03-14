@@ -1,0 +1,33 @@
+<%#
+Create a search form using query params, that allow a user to search
+
+ %>
+
+<%= form_with(url: spotify_path, method: 'get', local: true) do |form| %>
+  <%= form.label :query, 'Search for a playlist', style:'' %>
+  <%= form.text_field :query %>
+  <%= form.submit 'Search' %>
+<% end %>
+
+
+<div class="playlist-container">
+  <% if @playlists %>
+    <% @playlists.each do |playlist| %>
+      <div class="playlist">
+        <h3><%= playlist.name %></h3>
+
+
+        <iframe  class="spotify-iframe" src="https://open.spotify.com/embed/playlist/<%= playlist.id %>" width="320" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <% end %>
+  <% end %>
+</div>
+
+<style>
+  .playlist-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+</style>
