@@ -1,9 +1,11 @@
-
-
 <div class="quote-title">
 <h3>Today's quote</h3>
 </div>
-<p class="quotes">"When everything seems to be going against you, remember that the airplane takes off against the wind, not with it."  - Henry Ford</p>
+
+  <div class="quote">
+    <p><%= @quote.content%></p>
+  </div>
+
 
 <div class="features">
 
@@ -17,7 +19,7 @@
     <%= render "modal" %>
   <% end %>
   <div class="journal">
-    <h4>My journals</h4>
+    <h4><%= link_to "My journals", journal_entries_path, class: 'text-white' %></h4>
   </div>
 
   <div class="vibes">
@@ -31,7 +33,7 @@
 
 
   <div class="therapists">
-    <h4>Therapists</h4>
+    <h4><%= link_to "Therapists", therapists_path, class: 'text-white' %></h4>
   </div>
 
 </div>
@@ -40,7 +42,7 @@
 <%# navbar with home, progress, quotes  %>
 
 
-<div class="icons border-top mb-5 pt-3">
+<%# <div class="icons border-top mb-5 pt-3">
 
   <div class="icon">
     <i class="fa-solid fa-house"></i>
@@ -58,4 +60,4 @@
     <h6>Quotes</h6>
   </div>
 
-</div>
+</div> %>

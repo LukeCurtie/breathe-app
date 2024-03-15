@@ -23,3 +23,35 @@ require "faker"
   )
   therapist.save!
  end
+
+
+
+ Quote.destroy_all
+
+ quotes = [
+  #  "'When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.' -Henry Ford",
+    # "'The greatest glory in living lies not in never failing, but in rising every time we fail.' -Nelson Mandela",
+    "'A problem is a chance for you to do your best.' -Duke Ellington",
+    " 'No guts, no story.' -Chris Brady",
+    " 'No pressure, no diamonds.' -Thomas Carlyle",
+    "'You can if you think you can.' -George Reeves",
+   " My life is my message. -Mahatma Gandhi",
+   "'Why fit in when you were born to stand out?' -Dr. Seuss",
+   "'Positive thoughts lead to positive results.' -Maria V. Snyder",
+
+
+# quotes_tomorrow =
+    # "'Nothing I accept about myself can be used against me to diminish me.' -Audre Lorde",
+    # "'A big part of being a well-adjusted person is accepting that you can’t be good at everything.' -Kelly Williams Brown",
+    # "'Failure is the condiment that gives success its flavor.' -Truman Capote",
+    # "'Believe that life is worth living and your belief will help create the fact.' -William James",
+    # "'We must embrace pain and burn it as fuel for our journey.' -Kenji Miyazawa",
+    "'Turn your wounds into wisdom.' - Oprah Winfrey"]
+
+ quotes.each_with_index do | quote, index|
+   Quote.create!(content: quote, publish_date: Date.today - index.days)
+ end
+
+#  quotes_tomorrow.each_with_index do | quote, index|
+#   Quote.create!(content: quote, publish_date: Date.today + index + 1)
+# end

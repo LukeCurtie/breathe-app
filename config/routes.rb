@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -13,11 +14,15 @@ Rails.application.routes.draw do
 
 
 
+
   get "aichat" => "pages#aichat"
   get "chat_responses" => 'chat_responses#stream'
 
 
   get "spotify" => 'spotify#display'
   get '/spotify', to: 'spotify#search'
+
+
+  resources :quotes, only: [:index]
 
 end

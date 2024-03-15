@@ -1,0 +1,20 @@
+  <h2 class="quote-title">Quote of the day</h2>
+
+  <div class="container">
+
+      <div class="quote">
+        <p><%=@quote.content%></p>
+      </div>
+
+   <h2>Previous quotes</h2>
+
+      <div class="previous-quotes">
+       <% @quotes.each do |quote|%>
+
+      <div class="old-quotes">
+        <p><%=quote.content%></p>
+        <p><%=quote.publish_date%></p>
+        <% end %>
+      </div>
+    </div>
+  </div>

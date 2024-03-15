@@ -2,21 +2,18 @@
 
   <div class="icon">
     <i class="fa-solid fa-house"></i>
-    <h5>Home</h5>
+    <h5><%= link_to "Home", root_path, class: 'text-white'%></h5>
   </div>
 
   <div class="icon">
     <i class="fa-solid fa-chart-simple"></i>
-    <h5>Progress</h5>
+    <h5><%= link_to "Progress", moods_path, class: 'text-white'%></h5>
   </div>
 
 
   <div class="icon">
     <i class="fa-solid fa-brain"></i>
-    <h5>Quotes</h5>
+    <h5><%= link_to "Quotes", quotes_path, class: 'text-white'%></h5>
   </div>
-
-
-
 
 </div>

@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.1].define(version: 2024_03_13_070119) do
-ActiveRecord::Schema[7.1].define(version: 2024_03_13_064337) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_14_064609) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,12 +42,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_064337) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "chats", force: :cascade do |t|
-    t.string "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "journal_entries", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -59,7 +51,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_064337) do
     t.index ["user_id"], name: "index_journal_entries_on_user_id"
   end
 
-
   create_table "moods", force: :cascade do |t|
     t.string "emotion"
     t.date "date"
@@ -67,7 +58,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_064337) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_moods_on_user_id"
-    
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string "content"
+    t.date "publish_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "therapists", force: :cascade do |t|
     t.string "name"
     t.string "address"

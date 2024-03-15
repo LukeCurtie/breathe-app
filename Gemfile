@@ -53,10 +53,14 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "geocoder"
 gem "faker"
+
 gem "ruby-openai", "~> 5.1"
 gem 'rspotify'
 
 gem 'rack-cors'
+
+gem "simple_calendar"
+
 
 
 group :development, :test do
