@@ -3,10 +3,9 @@ Create a search form using query params, that allow a user to search
 
  %>
 
-<%= form_with(url: spotify_path, method: 'get', local: true) do |form| %>
-  <%= form.label :query, 'Search for a playlist', style:'' %>
-  <%= form.text_field :query %>
-  <%= form.submit 'Search' %>
+<%= form_with(url: spotify_path, method: 'get', local: true, class: 'search-form') do |form| %>
+  <%= form.text_field :query, class: 'search-input', id: 'search-input' %>
+  <%= form.submit 'Search', class: 'search-button' %>
 <% end %>
 
 
@@ -14,10 +13,10 @@ Create a search form using query params, that allow a user to search
   <% if @playlists %>
     <% @playlists.each do |playlist| %>
       <div class="playlist">
-        <h3><%= playlist.name %></h3>
-
 
         <iframe  class="spotify-iframe" src="https://open.spotify.com/embed/playlist/<%= playlist.id %>" width="320" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
 
     <% end %>
   <% end %>
@@ -29,5 +28,38 @@ Create a search form using query params, that allow a user to search
     justify-content: center;
     text-align: center;
 
+
   }
+    .search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .search-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  .spotify-iframe{
+    margin: 10px;
+  }
+
 </style>

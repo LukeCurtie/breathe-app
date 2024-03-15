@@ -19,7 +19,7 @@ export default class extends Controller {
 
     this.#createLabel("You");
     this.#createMessage(this.promptTarget.value);
-    this.#createLabel("ChatGPT");
+    this.#createLabel("Therapist");
     this.currentPre = this.#createMessage();
 
     this.#setupEventSource();
