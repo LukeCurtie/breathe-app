@@ -37,6 +37,13 @@ class JournalEntriesController < ApplicationController
 
   end
 
+  def destroy
+    @journal_entry = JournalEntry.find(params[:id])
+    @journal_entry.destroy
+    redirect_to journal_entries_path
+
+  end
+
   private
 
   def journal_entry_params
