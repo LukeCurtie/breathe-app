@@ -4,26 +4,113 @@
   flex-direction: column;
   justify-content:space-evenly;
   align-items: center;
-  width: 100%;
-  height: 90%;
-  // margin-top: 60px;
-  // margin-bottom: 80px;
+  width: 90%;
+  height: 40vh;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  margin-left: 20px;
+  padding-bottom:100px ;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgba(134, 239, 239, 0.976);
+  background: transparent;
+  box-shadow: 1px 1px 20px 5px rgba(247, 245, 245, 0.59);
+  backdrop-filter: blur(10px);
+
+
+  // position: relative;
+  // overflow: hidden;
+
+
 }
+
+
+
+
+// ::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background: inherit;
+//   filter: blur(10px);
+//   z-index: 1;
+// }
+
+
 
   .old-quotes {
 
 
     width: 300px;
     height: 90px;
-    border: 2px solid black;
+    // border: 2px solid black;
     border-radius: 8px;
-    // padding-left: 15px;
-    // margin-bottom: 90px;
-    // margin-top: 50px;
-    // border-left: 15px solid black;
+    color:rgb(250, 247, 243);
+    // background-color:rgb(47, 56, 46) ;
+    opacity: 0.8;
+    margin-bottom: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    // box-shadow: 1px 1px 20px 5px rgba(247, 245, 245, 0.59);
+    // position: relative;
+    // z-index: 2;
+
+
+
   }
 
 // .previous-quotes {
 //   width: 90%;
 //   height: 300px;
 // }
+
+  .all-quotes {
+    height: 100vh;
+    background: linear-gradient(0deg, #5e6eba 4%, #34a0a2 100%);
+    // background-image: linear-gradient(315deg, rgba(25, 136, 247, 1) 0%, rgba(247, 25, 136, 1) 100%);
+    // opacity: 0.25;
+    // background-image: linear-gradient(180deg, rgba(245, 245, 245, 1) 0%, rgba(24, 209, 247, 1) 100%);
+    // // background-image: linear-gradient(0deg, rgba(76, 91, 107, 0.48) 0%, rgba(66, 164, 255, 1) 100%);
+    // background-image: linear-gradient(0deg, rgba(76, 91, 107, 0.77) 0%, rgba(66, 164, 255, 1) 100%);
+  }
+
+  .quote-color {
+    color: rgba(244, 238, 236, 0.628)
+  }
+
+  // .quote-title {
+  //   // margin-left: 15px;
+
+  // }
+  .tracking-in-expand {
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
