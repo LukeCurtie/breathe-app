@@ -1,65 +1,36 @@
-<%#
-Create a search form using query params, that allow a user to search
 
- %>
+<div class="form" data-controller='search-playlist'">
 
-<%= form_with(url: spotify_path, method: 'get', local: true, class: 'search-form') do |form| %>
-  <%= form.text_field :query, class: 'search-input', id: 'search-input' %>
-  <%= form.submit 'Search', class: 'search-button' %>
+
+
+<%= form_with url: spotify_path, method: 'get', local: true, class: 'search-form',  data: {search_playlist_target: 'form'}, html:{autocomplete:'off'} do   %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: 'search-input' ,
+  id: 'search-input',
+  placeholder: 'Search for a playlist',
+  data:{
+    action: 'keyup->search-playlist#update',
+    search_playlist_target:'input'
+  }
+  %>
+<div class="">
+  <i class='fa fa-search fa-2x'></i>
+</div>
+
 <% end %>
 
 
-<div class="playlist-container">
-  <% if @playlists %>
-    <% @playlists.each do |playlist| %>
-      <div class="playlist">
-
-        <iframe  class="spotify-iframe" src="https://open.spotify.com/embed/playlist/<%= playlist.id %>" width="320" height="480" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 
+    <%= render 'results' %>
 
-    <% end %>
-  <% end %>
+
 </div>
 
-<style>
-  .playlist-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
 
 
-  }
-    .search-form {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  }
+<script>
 
-  .search-input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-  }
 
-  .search-button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .search-button:hover {
-    background-color: #0056b3;
-  }
-  .spotify-iframe{
-    margin: 10px;
-  }
-
-</style>
+</script>

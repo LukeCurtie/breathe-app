@@ -15,6 +15,7 @@ class ChatResponsesController < ApplicationController
         parameters: {
           model:    "gpt-3.5-turbo",
           messages: [
+
                       { role: "user", content: params[:prompt] }],
           stream:   proc do |chunk|
             content = chunk.dig("choices", 0, "delta", "content")

@@ -2,7 +2,8 @@ import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="chat"
 export default class extends Controller {
-  static targets = ["prompt", "conversation"];
+
+  static targets = ["prompt", "conversation", ];
 
   connect() {
     console.log("connected");
@@ -26,6 +27,12 @@ export default class extends Controller {
 
     this.promptTarget.value = "";
   }
+
+
+
+
+
+
 
   #createLabel(text) {
     const label = document.createElement("strong");
@@ -65,3 +72,5 @@ export default class extends Controller {
     }
   }
 }
+
+
