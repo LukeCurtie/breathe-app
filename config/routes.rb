@@ -10,5 +10,19 @@ Rails.application.routes.draw do
   resources :journal_entries, only: [:new, :create, :show, :index, :edit]
   resources :moods, only: [:index, :new, :create]
   resources :therapists, only: [:index]
+
+
+
+
+
+  get "aichat" => "pages#aichat"
+  get "chat_responses" => 'chat_responses#stream'
+
+
+  get "spotify" => 'spotify#display'
+  get '/spotify', to: 'spotify#search'
+
+
   resources :quotes, only: [:index]
+
 end

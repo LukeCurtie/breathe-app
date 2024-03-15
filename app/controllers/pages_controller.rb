@@ -34,4 +34,8 @@ class PagesController < ApplicationController
       end
     end
   end
+
+  def aichat
+
+  end
 end

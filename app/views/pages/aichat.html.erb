@@ -1,0 +1,56 @@
+<div data-controller="aichat" class="chat-container">
+  <section data-aichat-target="conversation" class="chat-conversation">
+  </section>
+  <%= form_with data: { action: "aichat#generateResponse" } do |form| %>
+    <div class="chat-input">
+      <%= form.text_area :message, id: 'prompt',
+                         data:         { aichat_target: "prompt" },
+                         class: 'chat-textarea'
+      %>
+      <%= form.submit 'Send', class: 'chat-submit' %>
+    </div>
+  <% end %>
+</div>
+
+<style>
+  .chat-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+
+  .chat-conversation {
+    height: 50vh; /* 50% of the viewport height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    word-wrap: break-word;
+  }
+
+  .chat-input {
+    display: flex;
+    flex-direction: column; /* stack the textarea and button vertically */
+  }
+
+  .chat-textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .chat-submit {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+  }
+
+  .chat-submit:hover {
+    background-color: #0056b3;
+  }
+</style>
