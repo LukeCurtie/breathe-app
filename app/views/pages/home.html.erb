@@ -1,63 +1,41 @@
-<div class="quote-title">
-<h3>Today's quote</h3>
-</div>
-
-  <div class="quote">
-    <p><%= @quote.content%></p>
+  <div class="quote-title">
+  <h3>Today's quote</h3>
   </div>
 
+    <div class="quote">
+      <p><%= @quote.content%></p>
+    </div>
 
-<div class="features">
+
+  <div class="features">
 
 
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary feelings" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <h4><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
-  </button>
-  <!-- Render modal -->
-  <% if @mood.new_record? %>
-    <%= render "modal" %>
-  <% end %>
-  <div class="journal">
-    <h4><%= link_to "My journals", journal_entries_path, class: 'text-white' %></h4>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary feelings feelings-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <h4 class><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
+    </button>
+    <!-- Render modal -->
+    <% if @mood.new_record? %>
+      <%= render "modal" %>
+    <% end %>
+
+    <div class="container grid-2 gap-1">
+      <div class="journal component others-card">
+        <h4><%= link_to "My journals", journal_entries_path, class: 'text-white' %></h4>
+      </div>
+
+      <div class="vibes component vibes-card">
+        <h4><%= link_to "Vibes", spotify_path %></h4>
+      </div>
+
+      <div class="ai component others-card">
+        <h4><%= link_to "AI chat", aichat_path, class: 'text-white' %></h4>
+      </div>
+
+
+      <div class="therapists component others-card"">
+        <h4><%= link_to "Therapists", therapists_path, class: 'text-white' %></h4>
+      </div>
+    </div>
+
   </div>
-
-  <div class="vibes">
-    <h4>Vibes</h4>
-  </div>
-
-
-  <div class="ai">
-    <h4>ai chat</h4>
-  </div>
-
-
-  <div class="therapists">
-    <h4><%= link_to "Therapists", therapists_path, class: 'text-white' %></h4>
-  </div>
-
-</div>
-
-
-<%# navbar with home, progress, quotes  %>
-
-
-<%# <div class="icons border-top mb-5 pt-3">
-
-  <div class="icon">
-    <i class="fa-solid fa-house"></i>
-    <h6>Home</h6>
-  </div>
-
-  <div class="icon">
-    <i class="fa-solid fa-chart-simple"></i>
-    <h6>Progress</h6>
-  </div>
-
-
-  <div class="icon">
-    <i class="fa-solid fa-brain"></i>
-    <h6>Quotes</h6>
-  </div>
-
-</div> %>
