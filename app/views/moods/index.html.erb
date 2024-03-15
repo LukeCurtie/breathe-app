@@ -4,7 +4,7 @@
 <div class="calendar">
   <%= date.day %>
   <% if moods.present? %>
-    <p> <%= moods.first["emotion"] %> </p>
+    <p> <%= moods.first["emotion"].split(" ").first %> </p>
   <% end %>
   </div>
 <% end %>
@@ -12,3 +12,4 @@
 
 
 <%# Mood is an array of hashes that's why moods.first["emotion"]%>
+<%# Now we used moods.first["emotion"].split(" ").first to retieve the emoji only%>
