@@ -1,20 +1,34 @@
-  <h2 class="quote-title">Quote of the day</h2>
+<div class="all-quotes">
+  <h2 class="quote-title tracking-in-expand m-3" style="color:black;">Quote of the day</h2><hr>
 
   <div class="container">
 
       <div class="quote">
-        <p><%= @quote.content %></p>
+        <i><p class="quote-color "></p></i>
       </div>
 
-   <h2>Previous quotes</h2>
+      <div class="quote">
+  <i><p class="quote-color" id="typed-quote"></p></i>
+</div>
+
+<script>
+ const typed = new Typed('#typed-quote', {
+    strings: ["<%= @quote.content %>"],
+    typeSpeed: 40
+  });
+</script>
+
+   <u><h2 class="previous-title " style="color:black">Previous quotes</h2></u><hr>
 
       <div class="previous-quotes">
        <% @quotes.each do |quote|%>
 
       <div class="old-quotes">
         <p><%=quote.content%></p>
-        <p><%=quote.publish_date%></p>
+       <u> <p><%=quote.publish_date%></p></u>
         <% end %>
       </div>
     </div>
   </div>
+
+</div>
