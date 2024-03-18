@@ -1,34 +1,39 @@
-<div class="all-quotes">
-  <h2 class="quote-title tracking-in-expand m-3" style="color:black;">Quote of the day</h2><hr>
-
-  <div class="container">
-
-      <div class="quote">
-        <i><p class="quote-color "></p></i>
-      </div>
-
-      <div class="quote">
-  <i><p class="quote-color" id="typed-quote"></p></i>
+<div class="quotes-banner mb-3">
+  <h3>Quote of the day</h3>
+  <p id="typed-quote"></p>
 </div>
+
+<div class="container quotes-container">
+  <h3 class="previous-title " >Previous quotes</h3>
+  <% @quotes.each do |quote|%>
+    <div class="quote-card">
+      <p><%= quote.content %></p>
+      <div class="date">
+        <p><%= quote.publish_date.strftime("%d %B %Y") %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+  <%# animated emoji we will use in home index page %>
+
+
+
+ <%# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png" alt="Enraged Face" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disappointed%20Face.png" alt="Disappointed Face" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png" alt="Anxious Face with Sweat" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Expressionless%20Face.png" alt="Expressionless Face" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20Exhaling.png" alt="Face Exhaling" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20Screaming%20in%20Fear.png" alt="Face Screaming in Fear" width="25" height="25" />
+ <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Tears%20of%20Joy.png" alt="Face with Tears of Joy" width="25" height="25" /> %>
 
 <script>
  const typed = new Typed('#typed-quote', {
-    strings: ["<%= @quote.content %>"],
-    typeSpeed: 40
+    strings: ["<%= @quote_today.content %>"],
+    typeSpeed: 40,
+    backSpeed: 10,
+    cursorChar: '',
   });
 </script>
-
-   <u><h2 class="previous-title " style="color:black">Previous quotes</h2></u><hr>
-
-      <div class="previous-quotes">
-       <% @quotes.each do |quote|%>
-
-      <div class="old-quotes">
-        <p><%=quote.content%></p>
-       <u> <p><%=quote.publish_date%></p></u>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-</div>

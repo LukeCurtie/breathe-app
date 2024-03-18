@@ -29,13 +29,13 @@ require "faker"
  Quote.destroy_all
 
  quotes = [
-    "'A problem is a chance for you to do your best.' -Duke Ellington",
-    " 'No guts, no story.' -Chris Brady",
-    " 'No pressure, no diamonds.' -Thomas Carlyle",
-    "'You can if you think you can.' -George Reeves",
-   " My life is my message. -Mahatma Gandhi",
-   "'Why fit in when you were born to stand out?' -Dr. Seuss",
-   "'Positive thoughts lead to positive results.' -Maria V. Snyder"]
+    "'A problem is a chance for you to do your best.' - Duke Ellington",
+    " 'No guts, no story.' - Chris Brady",
+    " 'No pressure, no diamonds.' - Thomas Carlyle",
+    "'You can if you think you can.' - George Reeves",
+    " My life is my message. - Mahatma Gandhi",
+    "'Why fit in when you were born to stand out?' - Dr. Seuss",
+    "'Positive thoughts lead to positive results.' - Maria V. Snyder"]
 
 
 quotes_tomorrow = [
@@ -47,6 +47,14 @@ quotes_tomorrow = [
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
 
- quotes_tomorrow.each_with_index do | quote, index|
-  Quote.create!(content: quote, publish_date: Date.today + index + 1)
-end
+#  quotes_tomorrow.each_with_index do | quote, index|
+#   Quote.create!(content: quote, publish_date: Date.today + index + 1)
+# end
+
+# quotes.each_with_index do| quote, index |
+#   Quote.create!(content: quote, publish_date: Date.today - index - 0)
+# end
+
+# quotes_tomorrow.each_with_index do | quote, index|
+#   Quote.create!(content: quote, publish_date: Date.today + index - 2)
+# end
