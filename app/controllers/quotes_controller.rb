@@ -1,8 +1,7 @@
 class QuotesController < ApplicationController
   def index
-
-    @quote = Quote.where(publish_date: Date.today).sample
-    @quotes = Quote.order(publish_date: :desc).limit(3)
+    @quote_today = Quote.last
+    @quotes = Quote.order(publish_date: :desc).drop(1).first(3)
   end
 
 

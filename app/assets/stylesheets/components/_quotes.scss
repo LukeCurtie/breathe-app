@@ -1,116 +1,78 @@
-.previous-quotes {
-
+.card {
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 90%;
-  height: 40vh;
-  margin-top: 50px;
+  width: 85%;
+  height: 60%;
+  // transition: all 0.2s;
+  margin-right: 30px;
   margin-bottom: 80px;
-  margin-left: 20px;
-  padding-bottom:100px ;
-  border: 3px solid black;
-  border-radius: 10px;
-  background-color: rgba(134, 239, 239, 0.976);
-  background: transparent;
-  box-shadow: 1px 1px 20px 5px rgba(247, 245, 245, 0.59);
-  backdrop-filter: blur(10px);
-
-
-  // position: relative;
-  // overflow: hidden;
-
-
 }
 
 
+.all-quotes {
+  height:800px;
+  width:100%;
+  // background: linear-gradient(0deg, #5e6eba 4%, #34a0a2 100%);
 
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Relaxing-Images.jpg");
+}
 
-// ::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   background: inherit;
-//   filter: blur(10px);
-//   z-index: 1;
-// }
+.quote-color {
+  display: flex;
+  justify-content: center;  // This will horizontally center the child div
+  align-items: center;  // This will vertically center the child div
+  height: 5%;
+  width: 70%;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  margin-top: 5px;
+}
 
+.quote-title {
+  padding-top: 12px;
+  padding-left: 10px;
 
+}
 
-  .old-quotes {
+.previous-title {
+  padding-top: 12px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
 
+.quotes-banner {
+  margin: 15px;
+  text-align: center;
 
-    width: 300px;
-    height: 90px;
-    // border: 2px solid black;
-    border-radius: 8px;
-    color:rgb(250, 247, 243);
-    // background-color:rgb(47, 56, 46) ;
-    opacity: 0.8;
-    margin-bottom: 100px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    // box-shadow: 1px 1px 20px 5px rgba(247, 245, 245, 0.59);
-    // position: relative;
-    // z-index: 2;
-
-
-
-  }
-
-// .previous-quotes {
-//   width: 90%;
-//   height: 300px;
-// }
-
-  .all-quotes {
-    height: 100vh;
-    background: linear-gradient(0deg, #5e6eba 4%, #34a0a2 100%);
-    // background-image: linear-gradient(315deg, rgba(25, 136, 247, 1) 0%, rgba(247, 25, 136, 1) 100%);
-    // opacity: 0.25;
-    // background-image: linear-gradient(180deg, rgba(245, 245, 245, 1) 0%, rgba(24, 209, 247, 1) 100%);
-    // // background-image: linear-gradient(0deg, rgba(76, 91, 107, 0.48) 0%, rgba(66, 164, 255, 1) 100%);
-    // background-image: linear-gradient(0deg, rgba(76, 91, 107, 0.77) 0%, rgba(66, 164, 255, 1) 100%);
-  }
-
-  .quote-color {
-    color: rgba(244, 238, 236, 0.628)
-  }
-
-  // .quote-title {
-  //   // margin-left: 15px;
-
-  // }
-  .tracking-in-expand {
-    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  }
-
-
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
+  h3 {
+    color: white;
+    font-size: 2.5rem;
   }
 }
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
+
+.quotes-container {
+  h3 {
+    text-align: center;
   }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+}
+
+.quote-card {
+  font-family: "Petit Formal Script", cursive;
+  padding: 20px;
+  background-color: azure;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.date {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
