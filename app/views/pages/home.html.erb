@@ -1,3 +1,17 @@
+<div class="hi-msg">
+  <h1><%= "Hi, #{@current_user.name} !" %></h1>
+</div>
+
+<div class="features">
+    <!-- Button trigger modal / form -->
+    <button type="button" class="btn btn-primary feelings feelings-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <h4 class><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
+    </button>
+    <!-- Render modal / form -->
+    <% if @mood.new_record? %>
+      <%= render "modal" %>
+    <% end %>
+
 <div class="quote-title">
 <h3>Today's quote</h3>
 </div>
@@ -6,36 +20,22 @@
       <p><%= @quote.content%></p>
     </div>
 
-
-  <div class="features">
-
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary feelings feelings-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <h4 class><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
-    </button>
-    <!-- Render modal -->
-    <% if @mood.new_record? %>
-      <%= render "modal" %>
-    <% end %>
-
     <div class="container grid-2 gap-1">
       <div class="journal component others-card">
-        <h4><%= link_to "My journals", journal_entries_path, class: 'text-white' %></h4>
+        <h4><%= link_to "My journals", journal_entries_path, class: 'text-black' %></h4>
       </div>
 
       <div class="vibes component vibes-card">
-        <h4><%= link_to "Vibes", spotify_path %></h4>
+        <h4 class="home-link"><%= link_to "Vibes", spotify_path, class: 'text-black' %></h4>
       </div>
 
       <div class="ai component others-card">
-        <h4><%= link_to "AI chat", aichat_path, class: 'text-white' %></h4>
+        <h4><%= link_to "AI chat", aichat_path, class: 'text-black' %></h4>
       </div>
 
 
       <div class="therapists component others-card"">
-        <h4><%= link_to "Therapists", therapists_path, class: 'text-white' %></h4>
+        <h4><%= link_to "Therapists", therapists_path, class: 'text-black' %></h4>
       </div>
     </div>
-
-  </div>
+</div>
