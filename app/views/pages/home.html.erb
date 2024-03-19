@@ -11,7 +11,7 @@
     </button>
     <!-- Render modal / form -->
     <% if @mood.new_record? %>
-      <%= render "modal", locals: { moods: @moods } %>
+      <%= render "moods/modal", locals: { moods: @moods } %>
     <% end %>
 
   <% if @quote.present? %>

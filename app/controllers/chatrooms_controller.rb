@@ -6,6 +6,7 @@ class ChatroomsController < ApplicationController
   end
 
   def show
+    @therapist = Therapist.find(params[:therapist_id])
     @chatroom = Chatroom.find(params[:id])
     @message = Message.new
   end
