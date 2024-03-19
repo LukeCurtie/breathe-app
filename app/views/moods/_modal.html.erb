@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" style = "border-radius: 25px; margin-top: 250px">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">How are you feeling?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -9,13 +9,30 @@
       <div class="modal-body">
         <div class="row justify-content-center">
           <div class="mb-3 col text-center">
+
+<%# New section %>
+
             <%= simple_form_for @mood do |f|%>
-              <%= f.input :emotion, collection: [['😁 Joyful', '😁 '], ['🙂 Happy', ' 🙂 '], ['😐 Numb', ' 😐 '], ['😨 Scared', ' 😨 '], ['😭 Sad', ' 😭 '], ['😡 Angry', ' 😡 ']], label_method: :second, value_method: :first, as: :radio_buttons, input_html: { class: "emotion-selector" }, item_wrapper_class: 'emotion-item', legend_tag: false %>
-              <%= f.submit "Save"%>
-            <%end %>
+
+                <%= f.input :emotion,
+                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                item_wrapper_class: 'category-item',
+                as: :radio_buttons,
+                collection: @moods.map{|mood| mood[:name]},
+                legend_tag: false
+                %>
+                  <%= f.submit "Save", class: "submit-button btn btn-primary", style: "border-radius: 15px" %>
+                <% end %>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<%# <%= simple_form_for @mood do |f|%>
+  <%# <%= f.input :emotion, collection: [['😁 Joyful', '😁 '], ['🙂 Happy', ' 🙂 '], ['😐 Numb', ' 😐 '], ['😨 Scared', ' 😨 '], ['😭 Sad', ' 😭 '], ['😡 Angry', ' 😡 ']], label_method: :second, value_method: :first, as: :radio_buttons, input_html: { class: "emotion-selector" }, item_wrapper_class: 'emotion-item', legend_tag: false %>
+  <%# <%= f.submit "Save"%>
+<%# <%end %>

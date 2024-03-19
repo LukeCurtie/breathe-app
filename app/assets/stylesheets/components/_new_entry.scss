@@ -37,7 +37,7 @@ a, li{
   margin-top: 2rem;
 }
 
-.card{
+.journal-card{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -46,6 +46,8 @@ a, li{
   border: none;
   background-color: #b5b3b343;
   border-radius: 10px;
+
+  border-left: 13px solid rgb(114, 104, 104);
 
   margin-top: 1rem;
 
@@ -64,17 +66,17 @@ a, li{
   }
 
 
-  .left-bar{
+  // .left-bar{
 
-    width: 15px;
-    height: inherit;
-    min-height: 50px;
-    background: #000;
-    border-radius: 10px 0px 0px 10px;
+  //   width: 15px;
+  //   height: inherit;
+  //   min-height: 50px;
+  //   background: #000;
+  //   border-radius: 10px 0px 0px 10px;
 
 
 
-  }
+  // }
 
 
 }

@@ -1,26 +1,30 @@
 <div class="hi-msg">
+<% if @current_user.present? %>
   <h1><%= "Hi, #{@current_user.name} !" %></h1>
+<% end %>
 </div>
 
 <div class="features">
     <!-- Button trigger modal / form -->
-    <button type="button" class="btn btn-primary feelings feelings-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn feelings feelings-card text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <h4 class><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
     </button>
     <!-- Render modal / form -->
     <% if @mood.new_record? %>
-      <%= render "modal" %>
+      <%= render "modal", locals: { moods: @moods } %>
     <% end %>
 
-<div class="quote-title">
-<h3>Today's quote</h3>
-</div>
+  <% if @quote.present? %>
+  <div class="quote-title">
+    <h3>Quote</h3>
+  </div>
 
     <div class="quote">
-      <p><%= @quote.content%></p>
+      <p style = "font-size: 16px; font-family: Petit Formal Script, cursive; font-weight: bold"><%= @quote.content%></p>
     </div>
+  <% end %>
 
-    <div class="container grid-2 gap-1">
+    <div class="container grid-2 gap-1" style = "position: fixed; top: 400px">
       <div class="journal component others-card">
         <h4><%= link_to "My journals", journal_entries_path, class: 'text-black' %></h4>
       </div>

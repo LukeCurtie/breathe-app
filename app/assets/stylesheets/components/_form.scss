@@ -1,0 +1,36 @@
+.category-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  .category-item {
+    label {
+      color: transparent;
+      width: 35px;
+      height: 35px;
+      background-size: cover;;
+
+      &[for="mood_emotion_joyful"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Beaming%20Face%20with%20Smiling%20Eyes.png");
+      }
+
+      &[for="mood_emotion_happy"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Slightly%20Smiling%20Face.png");
+      }
+
+      &[for="mood_emotion_numb"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Neutral%20Face.png");
+      }
+
+      &[for="mood_emotion_anxious"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png");
+      }
+
+      &[for="mood_emotion_sad"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Loudly%20Crying%20Face.png");
+      }
+
+      &[for="mood_emotion_angry"] {
+        background-image: url("https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png");
+      }
+    }
+  }
+}

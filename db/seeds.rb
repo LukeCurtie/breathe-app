@@ -62,3 +62,27 @@ quotes_tomorrow = [
  quotes.each_with_index do | quote, index|
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
+
+
+puts "destroying moods."
+Mood.destroy_all
+puts "Destroying journal entries..."
+JournalEntry.destroy_all
+puts "Destroying user..."
+User.destroy_all
+
+puts "Creating user..."
+sanji = User.new(name: "Sanji", email: "sanji@email.com",
+password: "sanji123")
+sanji.save!
+puts "sanji created successfully."
+
+puts "populating calendar"
+(0..30).each do |i|
+  mood = Mood.new(
+    user: sanji,
+    emotion: ["Happy", "Sad", "Angry", "Anxious", "Joyful", "Numb"].sample,
+    date: Date.today - i
+    )
+  mood.save!
+end

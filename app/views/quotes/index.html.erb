@@ -1,7 +1,12 @@
 <div class="quotes-banner mb-3">
   <h3>Quote of the day</h3>
-  <p id="typed-quote"></p>
+  <div style="height: 50px"><p id="typed-quote" ></p>
+
+  </div>
 </div>
+
+
+
 
 <div class="container quotes-container">
   <h3 class="previous-title " >Previous quotes</h3>
@@ -16,19 +21,6 @@
 </div>
 
 
-
-  <%# animated emoji we will use in home index page %>
-
-
-
- <%# <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png" alt="Enraged Face" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disappointed%20Face.png" alt="Disappointed Face" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png" alt="Anxious Face with Sweat" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Expressionless%20Face.png" alt="Expressionless Face" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20Exhaling.png" alt="Face Exhaling" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20Screaming%20in%20Fear.png" alt="Face Screaming in Fear" width="25" height="25" />
- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Tears%20of%20Joy.png" alt="Face with Tears of Joy" width="25" height="25" /> %>
-
 <script>
  const typed = new Typed('#typed-quote', {
     strings: ["<%= @quote_today.content %>"],
@@ -36,4 +28,4 @@
     backSpeed: 10,
     cursorChar: '',
   });
-</script>
+ </script>

@@ -5,6 +5,26 @@ class PagesController < ApplicationController
 
     @quote = Quote.all.sample
 
+    @moods = [
+      {
+        name: "Joyful"
+      },
+      {
+        name: "Happy"
+      },
+      {
+        name: "Numb"
+      },
+      {
+        name: "Sad"
+      },
+      {
+        name: "Angry"
+      },
+      {
+        name: "Anxious"
+      }
+    ]
 
     @mood = Mood.find_by(user: current_user, date: Date.current)
     @thismood = "How are you feeling?"
@@ -14,23 +34,23 @@ class PagesController < ApplicationController
 
       case @mood.emotion
 
-      when "😁 Joyful"
+      when "Joyful"
         @thismood = "You feel joyful today"
 
-      when "🙂 Happy"
+      when "Happy"
         @thismood = "You feel happy today"
 
-      when "😐 Numb"
+      when "Numb"
         @thismood = "You feel numb today"
 
-      when "😭 Sad"
+      when "Sad"
         @thismood = "You feel sad today"
 
-      when "😡 Angry"
+      when "Angry"
         @thismood = "You feel angry today"
 
-      when "😨 Scared"
-        @thismood = "You feel scared today"
+      when "Anxious"
+        @thismood = "You feel anxious today"
       end
     end
   end
