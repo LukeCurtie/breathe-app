@@ -29,8 +29,8 @@ class PagesController < ApplicationController
       when "😡 Angry"
         @thismood = "You feel angry today"
 
-      when "😨 Scared"
-        @thismood = "You feel scared today"
+      when "😨 Anxious"
+        @thismood = "You feel anxious today"
       end
     end
   end

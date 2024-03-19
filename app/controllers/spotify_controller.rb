@@ -5,7 +5,7 @@ class SpotifyController < ApplicationController
 
   def display
     if params[:query].present?
-      @playlists = RSpotify::Playlist.search(params[:query]).first(5)
+      @playlists = RSpotify::Playlist.search(params[:query]).first(2)
       @tracks = RSpotify::Track.search(params[:query]).first(5)
     else
       @playlists = []

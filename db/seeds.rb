@@ -8,8 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
-# JournalEntry.destroy_all
 Therapist.destroy_all
 
 require "faker"
@@ -46,15 +44,3 @@ quotes_tomorrow = [
  quotes.each_with_index do | quote, index|
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
-
-#  quotes_tomorrow.each_with_index do | quote, index|
-#   Quote.create!(content: quote, publish_date: Date.today + index + 1)
-# end
-
-# quotes.each_with_index do| quote, index |
-#   Quote.create!(content: quote, publish_date: Date.today - index - 0)
-# end
-
-# quotes_tomorrow.each_with_index do | quote, index|
-#   Quote.create!(content: quote, publish_date: Date.today + index - 2)
-# end

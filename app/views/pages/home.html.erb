@@ -4,7 +4,7 @@
 
 <div class="features">
     <!-- Button trigger modal / form -->
-    <button type="button" class="btn btn-primary feelings feelings-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn feelings feelings-card text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <h4 class><i class="fa-solid fa-face-smile"></i>  <%= @thismood  %></h4>
     </button>
     <!-- Render modal / form -->
@@ -12,13 +12,15 @@
       <%= render "modal" %>
     <% end %>
 
-<div class="quote-title">
-<h3>Today's quote</h3>
-</div>
+  <% if @quote.present? %>
+  <div class="quote-title">
+    <h3>Quote</h3>
+  </div>
 
     <div class="quote">
-      <p><%= @quote.content%></p>
+      <p style = "font-size: 18px"><%= @quote.content%></p>
     </div>
+  <% end %>
 
     <div class="container grid-2 gap-1">
       <div class="journal component others-card">
