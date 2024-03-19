@@ -2,7 +2,7 @@ class JournalEntriesController < ApplicationController
 
   def index
 
-    @journal_entries = JournalEntry.all
+    @journal_entries = JournalEntry.where(user: current_user).order(created_at: :desc)
 
   end
 

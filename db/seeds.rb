@@ -44,3 +44,8 @@ quotes_tomorrow = [
  quotes.each_with_index do | quote, index|
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
+
+
+
+
+
