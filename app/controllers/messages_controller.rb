@@ -1,6 +1,8 @@
 class MessagesController < ApplicationController
   def create
     @chatroom = Chatroom.find(params[:chatroom_id])
+
+    @therapist_id = @chatroom.therapist_id
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
     @message.user = current_user
@@ -15,12 +17,12 @@ class MessagesController < ApplicationController
 
 
     end
-    
+
   end
 
   private
 
   def message_params
-    params.require(:message).permit(:content, :user, :chatroom_id)
+    params.require(:message).permit(:content, :chatroom_id)
   end
 end

@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :journal_entries
   resources :moods, only: [:index, :new, :create]
   resources :therapists, only: [:index,] do
-    resources :chatroom, only: [:show]
+    resources :chatrooms, only: [:show] do
+      resources :messages, only: [:create]
+    end
+
   end
 
 
