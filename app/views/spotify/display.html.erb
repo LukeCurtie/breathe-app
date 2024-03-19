@@ -1,7 +1,5 @@
 
-<div class="form" data-controller='search-playlist'">
-
-
+<div class="form" data-controller='search-playlist'>
 
 <%= form_with url: spotify_path, method: 'get', local: true, class: 'search-form',  data: {search_playlist_target: 'form'}, html:{autocomplete:'off'} do   %>
   <%= text_field_tag :query,
@@ -18,43 +16,6 @@
   <div class="form-search" data-search-playlist-target='searchIcon'>
     <i class='fa fa-search '></i>
   </div>
-
-
 <% end %>
-
-
-
-
     <%= render 'results' %>
-
-
 </div>
-
-<style>
-
-  .form{
-    position: relative;
-  }
-  .form-search{
-    position: absolute;
-    right: 30px;
-    top: 10px;
-
-  }
-.fa-search{
-  font-size: 20px;
-  color: #007BFF;
-  cursor: pointer;
-}
-  .playlist-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-</style>
-
-<script>
-
-
-</script>
