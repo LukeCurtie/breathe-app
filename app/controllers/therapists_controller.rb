@@ -13,4 +13,16 @@ class TherapistsController < ApplicationController
       }
     end
   end
+  def chatroom
+    therapist = Therapist.find(params[:id])
+    chatroom = therapist.chatroom
+
+    unless chatroom
+      chatroom = Chatroom.create(therapist: therapist)
+
+
+
+    end
+end
+
 end
