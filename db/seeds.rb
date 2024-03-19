@@ -9,8 +9,10 @@
 #   end
 
 
-# JournalEntry.destroy_all
+
+Chatroom.destroy_all
 Therapist.destroy_all
+
 
 require "faker"
 
@@ -18,13 +20,27 @@ require "faker"
  5.times do
   therapist = Therapist.new(
     name: Faker::Name.name,
-    address: [" Candos Vacoas Road, Quatre Bornes", "Ghoorah Lane,Long Mountain", "Rue Marianne,Mahebourg", "Pamplemousses", "Beau Bassin-Rose Hill"].sample, # Randomly select an address from the array
+    address: [" Candos Vacoas Road, Quatre Bornes", "Ghoorah Lane,Long Mountain", "Rue Marianne,Mahebourg", "Pamplemousses", "Beau Bassin-Rose Hill"].sample,
+    user: User.create!(name: Faker::Name, email: Faker::Internet.email, password: "123456")
+
 
   )
+
+
+
   therapist.save!
  end
 
+therapists = Therapist.all
 
+puts "#{therapists.count} therapists created"
+
+therapists.each do |therapist|
+  chatroom = Chatroom.new
+  chatroom.therapist = therapist
+  chatroom.name = "chatroom"
+  chatroom.save!
+end
 
  Quote.destroy_all
 
@@ -46,15 +62,3 @@ quotes_tomorrow = [
  quotes.each_with_index do | quote, index|
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
-
-#  quotes_tomorrow.each_with_index do | quote, index|
-#   Quote.create!(content: quote, publish_date: Date.today + index + 1)
-# end
-
-# quotes.each_with_index do| quote, index |
-#   Quote.create!(content: quote, publish_date: Date.today - index - 0)
-# end
-
-# quotes_tomorrow.each_with_index do | quote, index|
-#   Quote.create!(content: quote, publish_date: Date.today + index - 2)
-# end

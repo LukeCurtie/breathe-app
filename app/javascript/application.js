@@ -3,7 +3,7 @@ import "@hotwired/turbo-rails";
 import "controllers";
 import "@popperjs/core";
 import "bootstrap";
-
+import "@rails/actioncable"
 // const addImage = document.querySelector(".fa-image");
 // const imageInput = document.querySelector("#image-input");
 
