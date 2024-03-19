@@ -4,7 +4,28 @@
 <div class="calendar">
   <%= date.day %>
   <% if moods.present? %>
-    <p> <%= moods.first["emotion"].split(" ").first %> </p>
+    <% case moods.first["emotion"]
+
+    when "Joyful" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Beaming%20Face%20with%20Smiling%20Eyes.png",width: 20, height: 20 %>
+
+    <% when "Happy" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Slightly%20Smiling%20Face.png",width: 20, height: 20 %>
+
+    <% when "Numb" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Neutral%20Face.png",width: 20, height: 20 %>
+
+    <% when "Anxious" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png",width: 20, height: 20 %>
+
+    <% when "Sad" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Loudly%20Crying%20Face.png",width: 20, height: 20 %>
+
+    <% when "Angry" %>
+    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png",width: 20, height: 20 %>
+
+    <% end %>
+
   <% end %>
   </div>
 <% end %>

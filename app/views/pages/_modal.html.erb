@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" style = "border-radius: 25px; margin-top: 250px">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">How are you feeling?</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -9,46 +9,22 @@
       <div class="modal-body">
         <div class="row justify-content-center">
           <div class="mb-3 col text-center">
-              <%= simple_form_for @mood do |f|%>
-                <%= f.label :emotion do %>
 
-                <div class = "all-emo d-flex">
+<%# New section %>
 
-                  <div class="emo">
-                    <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Beaming%20Face%20with%20Smiling%20Eyes.png", alt: "Beaming Face with Smiling Eyes", width: 35, height: 35 %>
-                      <%= f.radio_button :emotion, '😁 Joyful' %>
-                  </div>
+            <%= simple_form_for @mood do |f|%>
 
-                  <div class="emo">
-                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Slightly%20Smiling%20Face.png", alt: "Slightly Smiling Face", width: 35, height: 35 %>
-                        <%= f.radio_button :emotion, '🙂 Happy' %>
-                  </div>
-
-                  <div class="emo">
-                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Neutral%20Face.png", alt: "Neutral Face", width: 35, height: 35 %>
-                        <%= f.radio_button :emotion, '😐 Numb' %>
-                  </div>
-
-                  <div class="emo">
-                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png", alt: "Anxious Face with Sweat", width: 35, height: 35 %>
-                        <%= f.radio_button :emotion, '😨 Anxious' %>
-                  </div>
-
-                  <div class="emo">
-                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Loudly%20Crying%20Face.png", alt: "Loudly Crying Face", width: 35, height: 35 %>
-                        <%= f.radio_button :emotion, '😭 Sad' %>
-                  </div>
-
-                  <div class="emo">
-                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png", alt: "Enraged Face", width: 35, height: 35 %>
-                        <%= f.radio_button :emotion, '😡 Angry' %>
-                  </div>
-
-                </div>
+                <%= f.input :emotion,
+                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                item_wrapper_class: 'category-item',
+                as: :radio_buttons,
+                collection: @moods.map{|mood| mood[:name]},
+                legend_tag: false
+                %>
+                  <%= f.submit "Save", class: "submit-button btn btn-primary", style: "border-radius: 15px" %>
                 <% end %>
-                <!-- Repeat for other emotions -->
-                <%= f.submit "Save", class: "submit-button"%>
-              <% end %>
+
           </div>
         </div>
       </div>

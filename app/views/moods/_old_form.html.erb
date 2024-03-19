@@ -1,0 +1,56 @@
+<%= simple_form_for @mood do |f|%>
+
+                <div class = "all-emo d-flex">
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Beaming%20Face%20with%20Smiling%20Eyes.png", alt: "Beaming Face with Smiling Eyes", width: 35, height: 35 %>
+
+                      <%= f.radio_button :emotion, '😁 Joyful' %>
+                    <% end %>
+                  </div>
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Slightly%20Smiling%20Face.png", alt: "Slightly Smiling Face", width: 35, height: 35 %>
+                        <%= f.radio_button :emotion, '🙂 Happy' %>
+                        <% end %>
+                  </div>
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Neutral%20Face.png", alt: "Neutral Face", width: 35, height: 35 %>
+                        <%= f.radio_button :emotion, '😐 Numb' %>
+                        <% end %>
+                  </div>
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anxious%20Face%20with%20Sweat.png", alt: "Anxious Face with Sweat", width: 35, height: 35 %>
+                      <%= f.radio_button :emotion, '😨 Anxious' %>
+                    <% end %>
+                  </div>
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Loudly%20Crying%20Face.png", alt: "Loudly Crying Face", width: 35, height: 35 %>
+                        <%= f.radio_button :emotion, '😭 Sad' %>
+                    <% end %>
+
+                  </div>
+
+                  <div class="emo">
+                    <%= f.label :emotion do %>
+
+                      <%= image_tag "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Enraged%20Face.png", alt: "Enraged Face", width: 35, height: 35 %>
+                        <%= f.radio_button :emotion, '😡 Angry' %>
+                      <% end %>
+                  </div>
+
+                </div>
+                <!-- Repeat for other emotions -->
+                <%= f.submit "Save", class: "submit-button"%>
+              <% end %>
