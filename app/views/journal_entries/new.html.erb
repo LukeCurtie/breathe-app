@@ -4,10 +4,14 @@
 <%# want to use a textarea to allow for multi-line input %>
 <%# The content should be a textarea %>
 
+<%# The title should be a text field %>
+<div style="width: 95%; margin-left:10px">
+  <%= simple_form_for @journal_entry do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%# add inline style to the submit button %>
+    <%= f.button :submit, "Create a journal", class: "btn btn-primary rounded-pill", style: "background-color: #008DDA;" %>
 
-<%= simple_form_for @journal_entry do |f| %>
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.button :submit %>
+  <% end %>
 
-<% end %>
+</div>

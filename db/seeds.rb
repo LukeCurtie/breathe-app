@@ -45,6 +45,7 @@ quotes_tomorrow = [
    Quote.create!(content: quote, publish_date: Date.today - index )
  end
 
+
 puts "destroying moods."
 Mood.destroy_all
 puts "Destroying journal entries..."

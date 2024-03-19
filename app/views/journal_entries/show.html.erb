@@ -1,6 +1,8 @@
 <%# Show the journal entries %>
 
 <%# Show the title of the journal entry %>
+
+<div class="m-3" style="font-size: 16px;"><i class="fa-solid fa-arrow-left"></i> <%= link_to "back", journal_entries_path%></div>
 <div class='show-card'>
   <h1><%= @journal_entry.title %></h1>
 
@@ -15,15 +17,8 @@
 
     <p>
       <strong>Created:</strong>
-      <%= @journal_entry.created_at.strftime("%A, %d %B") %>
+      <%= @journal_entry.created_at.strftime("%A, %d %B %Y") %>
     </p>
-
-
-    <%# cl_imagetag %>
-
-
-
-
 
 
 </div>
@@ -64,7 +59,7 @@
 
   <div>
 <%= link_to journal_entry_path, data:{turbo_method: :delete} do%>
- <i class="fa-solid fa-trash"></i>
+ <i class="fa-solid fa-trash" style="color: #C40505"></i>
 
 
 
