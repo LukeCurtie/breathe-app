@@ -1,38 +1,32 @@
-
-
-
-
 <div class='container-chatroom'
   data-controller='chatroom-subscription'
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
-
-
-
-
-
     <div class="messages" data-chatroom-subscription-target="messages">
 
     <% @chatroom.messages.each do |message| %>
 
-      <%= render "messages/message", message: message %>
+      <% if message.user == current_user %>
+
+       <%= render "messages/message", message: message %>
+
+      <% end %>
     <% end %>
 
-
-
   </div>
-
-
-
 
 
     <% if @chatroom.therapist %>
-  <div class="therapist">
-    <p>Therapist: <%= @chatroom.therapist.name %></p>
+      <div class="therapist">
+        <p>Therapist: <%= @chatroom.therapist.name %></p>
+      </div>
+    <% end %>
+
+
+  <div class = "chat-form">
+    <%= simple_form_for(@message ,url: therapist_chatroom_messages_path(@therapist, @chatroom), method: :post, html: { data: {action: "turbo:submit-end->chatroom-subscription#resetForm"}, autocomplete: 'off'}) do |f| %>
+      <%= f.input :content %>
+      <%= f.submit "Send", class: "btn btn-primary", style: "border-radius: 15px" %>
+    <% end %>
   </div>
-
-<% end %>
-
-
-
 </div>
