@@ -1,17 +1,9 @@
-  <div class="message-box">
-  <div id="message-<%= message.id  %> ">
-  <div class="d-flex">
-
+<div id="message-<%= message.id  %>" style="max-width: 100%; margin-bottom: 15px; padding: 10px; border-radius: 18px; background-color: #0b93f6; color: white;">
+  <div class="d-flex justify-content-between">
     <b><%= message.user.name %></b>
-    <p style = "margin-left: 5px; font-size: 13px"><%= message.created_at.strftime("%H:%M")%></p>
-
+    <p style="margin-left: 5px; font-size: 13px"><%= message.created_at.strftime("%H:%M")%></p>
   </div>
   <div>
-     <p><%= message.content %></p>
-  </div>
-
+    <p> <%= message.content %></p>
   </div>
 </div>
-
-
-<%# Want to also have the user's name and the time the message was sent. %>

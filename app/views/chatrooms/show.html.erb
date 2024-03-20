@@ -1,32 +1,30 @@
 <div class='container-chatroom'
   data-controller='chatroom-subscription'
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-    <div class="messages" data-chatroom-subscription-target="messages">
+  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>"
+  data-chatroom-subscription-name-value="<%= current_user.name %>">
 
+  <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-
-      <% if message.user == current_user %>
-
-       <%= render "messages/message", message: message %>
-
-      <% end %>
-    <% end %>
-
-  </div>
-
-
-    <% if @chatroom.therapist %>
-      <div class="therapist">
-        <p>Therapist: <%= @chatroom.therapist.name %></p>
+      <div class=<%= message.sender?(current_user) ? 'position-right' : 'position-left'%>>
+        <div class="message-box <%= message.sender?(current_user) ? 'sender' : 'reciever'%>">
+          <%= render "messages/message", message: message %>
+        </div>
       </div>
     <% end %>
-
-
-  <div class = "chat-form">
+  </div>
+  <div class = "chat-form form-row align-items-center">
     <%= simple_form_for(@message ,url: therapist_chatroom_messages_path(@therapist, @chatroom), method: :post, html: { data: {action: "turbo:submit-end->chatroom-subscription#resetForm"}, autocomplete: 'off'}) do |f| %>
-      <%= f.input :content %>
-      <%= f.submit "Send", class: "btn btn-primary", style: "border-radius: 15px" %>
+    <%# add a plaeholder in the input %>
+    <div class='chat-inputs'>
+      <div class="input">
+        <%= f.input :content, label: false, placeholder: "Write to #{@therapist.name}" , wrapper: false, class: "form-control" %>
+      </div>
+      <div class="submit">
+        <%= f.submit "Send", class: "btn btn-primary", style: "border-radius: 15px;border-radius: 25px;" %>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
+<br><br><br><br><br>

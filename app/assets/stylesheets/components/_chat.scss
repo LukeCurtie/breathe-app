@@ -1,18 +1,22 @@
 #message_content {
-  width: 90%;
+  width: 78vw;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
 .messages {
-  margin-left: 10px;
+  margin: 10px;
 }
 
 .chat-form {
   margin-left: 10px;
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  z-index: 2;
 }
 
 .therapist p {
@@ -21,9 +25,34 @@
 
 .message-box {
   margin-bottom: 10px;
-  background-color: white;
+
   border-radius: 5px;
   padding: 5px;
   width: 50%;
 }
 
+.chat-inputs {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.submit {
+  height: 45px;
+}
+
+.reciever {
+  text-align: left;
+}
+
+.sender {
+  text-align: right;
+
+}
+
+.position-right {
+  display: flex;
+  justify-content: flex-end;
+
+}
