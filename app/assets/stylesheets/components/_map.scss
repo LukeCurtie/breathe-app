@@ -17,7 +17,15 @@
 }
 
 
-// .mapboxgl-canvas{
+.mapboxgl-canvas {
 //   width: 90vw !important;
 //   height: 90vh !important;
-// }
+ border-radius: 15px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 5px;
+  p {
+    font-size: 1.2em;
+  }
+}
