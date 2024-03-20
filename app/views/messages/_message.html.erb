@@ -1,7 +1,9 @@
+  <div class="message-box">
   <div id="message-<%= message.id  %> ">
-  <div>
+  <div class="d-flex">
 
-    <b><%= message.user.name %></b> 
+    <b><%= message.user.name %></b>
+    <p style = "margin-left: 5px; font-size: 13px"><%= message.created_at.strftime("%H:%M")%></p>
 
   </div>
   <div>
@@ -9,6 +11,7 @@
   </div>
 
   </div>
+</div>
 
 
 <%# Want to also have the user's name and the time the message was sent. %>

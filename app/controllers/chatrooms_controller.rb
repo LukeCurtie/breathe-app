@@ -11,4 +11,3 @@ class ChatroomsController < ApplicationController
     @message = Message.new
   end
 end
-

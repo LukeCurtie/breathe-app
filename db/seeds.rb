@@ -24,10 +24,11 @@ require "faker"
 
 
  5.times do
+  name = Faker::Name.name
   therapist = Therapist.new(
-    name: Faker::Name.name,
+    name: name,
     address: [" Candos Vacoas Road, Quatre Bornes", "Ghoorah Lane,Long Mountain", "Rue Marianne,Mahebourg", "Pamplemousses", "Beau Bassin-Rose Hill"].sample,
-    user: User.create!(name: Faker::Name, email: Faker::Internet.email, password: "123456")
+    user: User.create!(name: name, email: Faker::Internet.email, password: "123456")
 
 
   )
