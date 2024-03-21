@@ -14,15 +14,6 @@
       <%= render "moods/modal", locals: { moods: @moods } %>
     <% end %>
 
-  <% if @quote.present? %>
-  <div class="quote-title">
-    <h3>Quote</h3>
-  </div>
-
-    <div class="quote">
-      <p style = "font-size: 16px; font-family: Petit Formal Script, cursive; font-weight: bold"><%= @quote.content%></p>
-    </div>
-  <% end %>
 
     <div class="container grid-2 gap-2">
       <div class="journal component others-card">
@@ -34,7 +25,7 @@
       </div>
 
        <div class="ai component others-card">
-        <h4><%= link_to "AI chat", aichat_path, class: 'text-black'%></h4>
+        <h4><%= link_to "Jokes", aichat_path, class: 'text-black'%></h4>
        </div>
 
 
@@ -42,4 +33,13 @@
         <h4><%= link_to "Therapists", therapists_path, class: 'text-black' %></h4>
       </div>
     </div>
+  <% if @quote.present? %>
+  <div class="quote-title">
+    <h3>Quote</h3>
+  </div>
+
+    <div class="quote">
+      <p style = "font-size: 16px; font-family: Petit Formal Script, cursive; font-weight: bold"><%= @quote.content%></p>
+    </div>
+  <% end %>
 </div>

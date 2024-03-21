@@ -29,3 +29,22 @@
     font-size: 1.2em;
   }
 }
+
+.therapist-list {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.therapist-card {
+  border-radius: 10px;
+}
+
+.therapist-chat {
+
+  background-color: rgb(4, 193, 4);
+  border-radius: 10px;
+  width: 50%;
+}
