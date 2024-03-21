@@ -4,7 +4,7 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
+  /* .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -50,18 +50,80 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  } */
+
+
+/*======================
+    404 page
+=======================*/
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+
+ background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+
+
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+
+  .four_zero_four_bg h3{
+			 font-size:80px;
+			 }
+
+			 .link_404{
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;}
+	.contant_box_404{ margin-top:-50px;}
+
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
+<!-- <body class="rails-default-error-page">
+  This file lives in public/404.html -->
+  <!-- <div class="dialog">
     <div>
       <h1>The page you were looking for doesn't exist.</h1>
       <p>You may have mistyped the address or the page may have moved.</p>
     </div>
     <p>If you are the application owner check the logs for more information.</p>
-  </div>
+  </div> -->
+<!-- </body> -->
+<body>
+  <section class="page_404">
+    <div class="container">
+      <div class="row">
+      <div class="col-sm-12 ">
+      <div class="col-sm-10 col-sm-offset-1  text-center">
+      <div class="four_zero_four_bg">
+        <h1 class="text-center ">404</h1>
+
+
+      </div>
+
+      <div class="contant_box_404">
+      <h3 class="h2">
+      Look like you're lost
+      </h3>
+
+      <p>the page you are looking for not avaible!</p>
+
+      <a href="/" class="link_404">Go to Home</a>
+    </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
