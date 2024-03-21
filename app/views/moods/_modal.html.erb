@@ -21,10 +21,10 @@
                     item_wrapper_class: 'category-item',
                     input_html: {class: 'category-selector'},
                     as: :radio_buttons,
-                    collection: @moods.map{|mood| mood[:name]}.first(3),
+                    collection: @moods.map{|mood| mood[:name]}.first(3) + @moods.map{|mood| mood[:name]}.last(3),
                     legend_tag: false
                 %>
-                <%= f.input :emotion,
+                <%# <%= f.input :emotion,
                     label: "",
                     collection_wrapper_tag: 'div',
                     collection_wrapper_class: 'category-wrapper',
