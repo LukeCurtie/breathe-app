@@ -60,6 +60,7 @@ gem 'rspotify'
 gem 'rack-cors'
 
 gem "simple_calendar"
+gem "redis", ">= 4.0.1"
 
 
 
