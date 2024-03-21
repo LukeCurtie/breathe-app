@@ -4,21 +4,20 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url(background6.jpg);
+  // background-image: url(background7.jpg);
+  background-color: #CA53FF;
+  background: radial-gradient(at center, #CA53FF, #57E9C9);
+  min-height: 100vh;
+  margin: 0;
+  background-size: cover;
+  // background-position: 25%;
 }
-
-
 
 .image-tags{
   display: flex;
   justify-content: space-around;
 }
 
-
-body {
-  min-height: 100vh;
-  margin: 0;
-}
 
 .show-card {
   background-color: #f4f4f4;

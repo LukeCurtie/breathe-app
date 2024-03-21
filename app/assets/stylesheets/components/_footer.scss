@@ -1,18 +1,44 @@
 .icon h5 {
-  color:white;
-  font-size:medium;
+  color:black;
+  font-size:small;
 }
 
 .icon {
-  padding:5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 .icons {
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-radius: 20px 20px 0 0;
-  background: #6CA09D;
+  background: white;
 }
+
+.icon i {
+  // color:rgb(206, 220, 217);
+  // padding-bottom: 12px;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #C455FA;
+}
+
+// .icons {
+//   display: flex;
+//   justify-content: space-between;
+//   background-color: rgb(35, 34, 41);
+//   height: 65px;
+// }
+
+// .icon  {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding-left: 20px;
+//   padding-top: 5px;
+// }
