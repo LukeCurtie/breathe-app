@@ -60,7 +60,7 @@ gem 'rspotify'
 gem 'rack-cors'
 
 gem "simple_calendar"
-
+gem "redis"
 
 group :development, :test do
   gem "dotenv-rails"
