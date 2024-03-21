@@ -1,0 +1,6 @@
+
+ meta_product_name: "Breathe-app"
+ meta_title: Relax and breath in | Breathe"
+ meta_description: "Relax and take a deep breath"
+ meta_image: "OG IMAGE.png" # should exist in `app/assets/images/`
+ twitter_account: "@breathe_twitter_account" # required for Twitter Cards
