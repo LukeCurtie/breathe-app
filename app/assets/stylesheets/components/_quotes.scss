@@ -5,24 +5,15 @@
   align-items: center;
   width: 85%;
   height: 60%;
-  // transition: all 0.2s;
   margin-right: 30px;
   margin-bottom: 80px;
 }
 
 
-.all-quotes {
-  // height:800px;
-  // width:100%;
-  // background: linear-gradient(0deg, #5e6eba 4%, #34a0a2 100%);
-
-  // background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Relaxing-Images.jpg");
-}
-
 .quote-color {
   display: flex;
-  justify-content: center;  // This will horizontally center the child div
-  align-items: center;  // This will vertically center the child div
+  justify-content: center;
+  align-items: center;
   height: 5%;
   width: 70%;
   color: white;

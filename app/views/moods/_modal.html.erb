@@ -24,16 +24,6 @@
                     collection: @moods.map{|mood| mood[:name]}.first(3) + @moods.map{|mood| mood[:name]}.last(3),
                     legend_tag: false
                 %>
-                <%# <%= f.input :emotion,
-                    label: "",
-                    collection_wrapper_tag: 'div',
-                    collection_wrapper_class: 'category-wrapper',
-                    item_wrapper_class: 'category-item',
-                    input_html: {class: 'category-selector'},
-                    as: :radio_buttons,
-                    collection: @moods.map{|mood| mood[:name]}.last(3),
-                    legend_tag: false
-                %>
                   <%= f.submit "Save", class: "submit-button btn btn-primary", style: "border-radius: 15px" %>
                 <% end %>
 
@@ -43,8 +33,3 @@
     </div>
   </div>
 </div>
-
-<%# <%= simple_form_for @mood do |f|%>
-  <%# <%= f.input :emotion, collection: [['😁 Joyful', '😁 '], ['🙂 Happy', ' 🙂 '], ['😐 Numb', ' 😐 '], ['😨 Scared', ' 😨 '], ['😭 Sad', ' 😭 '], ['😡 Angry', ' 😡 ']], label_method: :second, value_method: :first, as: :radio_buttons, input_html: { class: "emotion-selector" }, item_wrapper_class: 'emotion-item', legend_tag: false %>
-  <%# <%= f.submit "Save"%>
-<%# <%end %>
