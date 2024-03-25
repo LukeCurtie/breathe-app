@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Final Project for LeWagon, using Ruby on Rails for the backend, Stimulus, Vanilla JS, and SCSS for the Front end. Breathe app is a PWA, built to help people struggling with mental health issues. Users have many features, such as searching for Spotify playlists, tracking their moods, speaking directly to a therapist and viewing them on a map, and, asking ChatGPT to generate jokes to uplift the mood.
